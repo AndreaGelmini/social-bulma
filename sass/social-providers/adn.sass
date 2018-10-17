@@ -1,0 +1,88 @@
+//variables base
+
+$adn-text-color: $social-text-color
+$adn-text-color-dark: darken( $adn-text-color, 10% )
+$adn-text-color-light: lighten( $adn-text-color, 10% )
+
+$adn-background-color: #ce563f
+$adn-background-color-dark: darken( $adn-background-color, 10% )
+$adn-background-color-light: lighten( $adn-background-color, 10% )
+
+$adn-border-color: rgba( $adn-background-color-dark ,0.2)
+
+$adn-shadow-color: $adn-background-color-dark
+$adn-focus-box-shadow-color: rgba($adn-background-color-dark, 0.25)
+
+$adn-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-adn
+  color: $adn-text-color
+  background-color: $adn-background-color-light
+  border-color: $adn-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $adn-background-color
+    border-color: $adn-border-color
+    color: $adn-text-color
+  &:focus,
+  &.is-focused
+    border-color: $adn-border-color
+    color: $adn-text-color
+    &:not(:active)
+      box-shadow: $adn-focus-box-shadow-size $adn-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $adn-background-color-dark
+    color: $adn-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $adn-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($adn-text-color, 5%)
+      color: $adn-background-color
+    &:active,
+    &.is-active
+      background-color: darken($adn-text-color, 5%)
+      color: $adn-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $adn-background-color
+    color: $adn-background-color
+    &:hover,
+    &:focus
+      background-color: $adn-background-color
+      border-color: $adn-border-color
+      color: $adn-text-color
+  &.is-inverted
+    background-color: $adn-text-color
+    color: $adn-background-color
+    &:hover
+      background-color: lighten( $adn-background-color-light, 20% )
+    &[disabled]
+      background-color: $adn-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $adn-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $adn-text-color
+    color: $adn-text-color
+    &:hover,
+    &:focus
+      background-color: $adn-text-color
+      color: $adn-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $adn-text-color
+      box-shadow: none
+      color: $adn-text-color

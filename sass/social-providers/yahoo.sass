@@ -1,0 +1,88 @@
+//variables base
+
+$yahoo-text-color: $social-text-color
+$yahoo-text-color-dark: darken( $yahoo-text-color, 10% )
+$yahoo-text-color-light: lighten( $yahoo-text-color, 10% )
+
+$yahoo-background-color: #500a6f
+$yahoo-background-color-dark: darken( $yahoo-background-color, 10% )
+$yahoo-background-color-light: lighten( $yahoo-background-color, 10% )
+
+$yahoo-border-color: rgba( $yahoo-background-color-dark ,0.2)
+
+$yahoo-shadow-color: $yahoo-background-color-dark
+$yahoo-focus-box-shadow-color: rgba($yahoo-background-color-dark, 0.25)
+
+$yahoo-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-yahoo
+  color: $yahoo-text-color
+  background-color: $yahoo-background-color-light
+  border-color: $yahoo-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $yahoo-background-color
+    border-color: $yahoo-border-color
+    color: $yahoo-text-color
+  &:focus,
+  &.is-focused
+    border-color: $yahoo-border-color
+    color: $yahoo-text-color
+    &:not(:active)
+      box-shadow: $yahoo-focus-box-shadow-size $yahoo-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $yahoo-background-color-dark
+    color: $yahoo-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $yahoo-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($yahoo-text-color, 5%)
+      color: $yahoo-background-color
+    &:active,
+    &.is-active
+      background-color: darken($yahoo-text-color, 5%)
+      color: $yahoo-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $yahoo-background-color
+    color: $yahoo-background-color
+    &:hover,
+    &:focus
+      background-color: $yahoo-background-color
+      border-color: $yahoo-border-color
+      color: $yahoo-text-color
+  &.is-inverted
+    background-color: $yahoo-text-color
+    color: $yahoo-background-color
+    &:hover
+      background-color: lighten( $yahoo-background-color-light, 20% )
+    &[disabled]
+      background-color: $yahoo-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $yahoo-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $yahoo-text-color
+    color: $yahoo-text-color
+    &:hover,
+    &:focus
+      background-color: $yahoo-text-color
+      color: $yahoo-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $yahoo-text-color
+      box-shadow: none
+      color: $yahoo-text-color

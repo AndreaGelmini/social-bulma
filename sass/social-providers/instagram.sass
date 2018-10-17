@@ -1,0 +1,88 @@
+//variables base
+
+$instagram-text-color: $social-text-color
+$instagram-text-color-dark: darken( $instagram-text-color, 10% )
+$instagram-text-color-light: lighten( $instagram-text-color, 10% )
+
+$instagram-background-color: #305777
+$instagram-background-color-dark: darken( $instagram-background-color, 10% )
+$instagram-background-color-light: lighten( $instagram-background-color, 10% )
+
+$instagram-border-color: rgba( $instagram-background-color-dark ,0.2)
+
+$instagram-shadow-color: $instagram-background-color-dark
+$instagram-focus-box-shadow-color: rgba($instagram-background-color-dark, 0.25)
+
+$instagram-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-instagram
+  color: $instagram-text-color
+  background-color: $instagram-background-color-light
+  border-color: $instagram-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $instagram-background-color
+    border-color: $instagram-border-color
+    color: $instagram-text-color
+  &:focus,
+  &.is-focused
+    border-color: $instagram-border-color
+    color: $instagram-text-color
+    &:not(:active)
+      box-shadow: $instagram-focus-box-shadow-size $instagram-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $instagram-background-color-dark
+    color: $instagram-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $instagram-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($instagram-text-color, 5%)
+      color: $instagram-background-color
+    &:active,
+    &.is-active
+      background-color: darken($instagram-text-color, 5%)
+      color: $instagram-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $instagram-background-color
+    color: $instagram-background-color
+    &:hover,
+    &:focus
+      background-color: $instagram-background-color
+      border-color: $instagram-border-color
+      color: $instagram-text-color
+  &.is-inverted
+    background-color: $instagram-text-color
+    color: $instagram-background-color
+    &:hover
+      background-color: lighten( $instagram-background-color-light, 20% )
+    &[disabled]
+      background-color: $instagram-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $instagram-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $instagram-text-color
+    color: $instagram-text-color
+    &:hover,
+    &:focus
+      background-color: $instagram-text-color
+      color: $instagram-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $instagram-text-color
+      box-shadow: none
+      color: $instagram-text-color

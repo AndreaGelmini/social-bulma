@@ -1,0 +1,88 @@
+//variables base
+
+$twitter-text-color: $social-text-color
+$twitter-text-color-dark: darken( $twitter-text-color, 10% )
+$twitter-text-color-light: lighten( $twitter-text-color, 10% )
+
+$twitter-background-color: #1da1f2
+$twitter-background-color-dark: darken( $twitter-background-color, 10% )
+$twitter-background-color-light: lighten( $twitter-background-color, 10% )
+
+$twitter-border-color: rgba( $twitter-background-color-dark ,0.2)
+
+$twitter-shadow-color: $twitter-background-color-dark
+$twitter-focus-box-shadow-color: rgba($twitter-background-color-dark, 0.25)
+
+$twitter-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-twitter
+  color: $twitter-text-color
+  background-color: $twitter-background-color-light
+  border-color: $twitter-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $twitter-background-color
+    border-color: $twitter-border-color
+    color: $twitter-text-color
+  &:focus,
+  &.is-focused
+    border-color: $twitter-border-color
+    color: $twitter-text-color
+    &:not(:active)
+      box-shadow: $twitter-focus-box-shadow-size $twitter-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $twitter-background-color-dark
+    color: $twitter-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $twitter-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($twitter-text-color, 5%)
+      color: $twitter-background-color
+    &:active,
+    &.is-active
+      background-color: darken($twitter-text-color, 5%)
+      color: $twitter-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $twitter-background-color
+    color: $twitter-background-color
+    &:hover,
+    &:focus
+      background-color: $twitter-background-color
+      border-color: $twitter-border-color
+      color: $twitter-text-color
+  &.is-inverted
+    background-color: $twitter-text-color
+    color: $twitter-background-color
+    &:hover
+      background-color: lighten( $twitter-background-color-light, 20% )
+    &[disabled]
+      background-color: $twitter-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $twitter-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $twitter-text-color
+    color: $twitter-text-color
+    &:hover,
+    &:focus
+      background-color: $twitter-text-color
+      color: $twitter-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $twitter-text-color
+      box-shadow: none
+      color: $twitter-text-color

@@ -1,0 +1,88 @@
+//variables base
+
+$facebook-text-color: $social-text-color
+$facebook-text-color-dark: darken( $facebook-text-color, 10% )
+$facebook-text-color-light: lighten( $facebook-text-color, 10% )
+
+$facebook-background-color: #2d4373
+$facebook-background-color-dark: darken( $facebook-background-color, 10% )
+$facebook-background-color-light: lighten( $facebook-background-color, 10% )
+
+$facebook-border-color: rgba( $facebook-background-color-dark ,0.2)
+
+$facebook-shadow-color: $facebook-background-color-dark
+$facebook-focus-box-shadow-color: rgba($facebook-background-color-dark, 0.25)
+
+$facebook-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-facebook
+  color: $facebook-text-color
+  background-color: $facebook-background-color-light
+  border-color: $facebook-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $facebook-background-color
+    border-color: $facebook-border-color
+    color: $facebook-text-color
+  &:focus,
+  &.is-focused
+    border-color: $facebook-border-color
+    color: $facebook-text-color
+    &:not(:active)
+      box-shadow: $facebook-focus-box-shadow-size $facebook-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $facebook-background-color-dark
+    color: $facebook-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $facebook-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($facebook-text-color, 5%)
+      color: $facebook-background-color-dark
+    &:active,
+    &.is-active
+      background-color: darken($facebook-text-color, 5%)
+      color: $facebook-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $facebook-background-color
+    color: $facebook-background-color
+    &:hover,
+    &:focus
+      background-color: $facebook-background-color
+      border-color: $facebook-border-color
+      color: $facebook-text-color
+  &.is-inverted
+    background-color: $facebook-text-color
+    color: $facebook-background-color
+    &:hover
+      background-color: lighten( $facebook-background-color-light, 20% )
+    &[disabled]
+      background-color: $facebook-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $facebook-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $facebook-text-color
+    color: $facebook-text-color
+    &:hover,
+    &:focus
+      background-color: $facebook-text-color
+      color: $facebook-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $facebook-text-color
+      box-shadow: none
+      color: $facebook-text-color

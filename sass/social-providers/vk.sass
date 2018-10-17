@@ -1,0 +1,88 @@
+//variables base
+
+$vk-text-color: $social-text-color
+$vk-text-color-dark: darken( $vk-text-color, 10% )
+$vk-text-color-light: lighten( $vk-text-color, 10% )
+
+$vk-background-color: #45668e
+$vk-background-color-dark: darken( $vk-background-color, 10% )
+$vk-background-color-light: lighten( $vk-background-color, 10% )
+
+$vk-border-color: rgba( $vk-background-color-dark ,0.2)
+
+$vk-shadow-color: $vk-background-color-dark
+$vk-focus-box-shadow-color: rgba($vk-background-color-dark, 0.25)
+
+$vk-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-vk
+  color: $vk-text-color
+  background-color: $vk-background-color-light
+  border-color: $vk-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $vk-background-color
+    border-color: $vk-border-color
+    color: $vk-text-color
+  &:focus,
+  &.is-focused
+    border-color: $vk-border-color
+    color: $vk-text-color
+    &:not(:active)
+      box-shadow: $vk-focus-box-shadow-size $vk-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $vk-background-color-dark
+    color: $vk-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $vk-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($vk-text-color, 5%)
+      color: $vk-background-color
+    &:active,
+    &.is-active
+      background-color: darken($vk-text-color, 5%)
+      color: $vk-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $vk-background-color
+    color: $vk-background-color
+    &:hover,
+    &:focus
+      background-color: $vk-background-color
+      border-color: $vk-border-color
+      color: $vk-text-color
+  &.is-inverted
+    background-color: $vk-text-color
+    color: $vk-background-color
+    &:hover
+      background-color: lighten( $vk-background-color-light, 20% )
+    &[disabled]
+      background-color: $vk-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $vk-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $vk-text-color
+    color: $vk-text-color
+    &:hover,
+    &:focus
+      background-color: $vk-text-color
+      color: $vk-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $vk-text-color
+      box-shadow: none
+      color: $vk-text-color

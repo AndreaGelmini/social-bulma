@@ -1,0 +1,88 @@
+//variables base
+
+$odnoklassniki-text-color: $social-text-color
+$odnoklassniki-text-color-dark: darken( $odnoklassniki-text-color, 10% )
+$odnoklassniki-text-color-light: lighten( $odnoklassniki-text-color, 10% )
+
+$odnoklassniki-background-color: #d35b0a
+$odnoklassniki-background-color-dark: darken( $odnoklassniki-background-color, 10% )
+$odnoklassniki-background-color-light: lighten( $odnoklassniki-background-color, 10% )
+
+$odnoklassniki-border-color: rgba( $odnoklassniki-background-color-dark ,0.2)
+
+$odnoklassniki-shadow-color: $odnoklassniki-background-color-dark
+$odnoklassniki-focus-box-shadow-color: rgba($odnoklassniki-background-color-dark, 0.25)
+
+$odnoklassniki-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-odnoklassniki
+  color: $odnoklassniki-text-color
+  background-color: $odnoklassniki-background-color-light
+  border-color: $odnoklassniki-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $odnoklassniki-background-color
+    border-color: $odnoklassniki-border-color
+    color: $odnoklassniki-text-color
+  &:focus,
+  &.is-focused
+    border-color: $odnoklassniki-border-color
+    color: $odnoklassniki-text-color
+    &:not(:active)
+      box-shadow: $odnoklassniki-focus-box-shadow-size $odnoklassniki-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $odnoklassniki-background-color-dark
+    color: $odnoklassniki-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $odnoklassniki-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($odnoklassniki-text-color, 5%)
+      color: $odnoklassniki-background-color
+    &:active,
+    &.is-active
+      background-color: darken($odnoklassniki-text-color, 5%)
+      color: $odnoklassniki-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $odnoklassniki-background-color
+    color: $odnoklassniki-background-color
+    &:hover,
+    &:focus
+      background-color: $odnoklassniki-background-color
+      border-color: $odnoklassniki-border-color
+      color: $odnoklassniki-text-color
+  &.is-inverted
+    background-color: $odnoklassniki-text-color
+    color: $odnoklassniki-background-color
+    &:hover
+      background-color: lighten( $odnoklassniki-background-color-light, 20% )
+    &[disabled]
+      background-color: $odnoklassniki-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $odnoklassniki-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $odnoklassniki-text-color
+    color: $odnoklassniki-text-color
+    &:hover,
+    &:focus
+      background-color: $odnoklassniki-text-color
+      color: $odnoklassniki-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $odnoklassniki-text-color
+      box-shadow: none
+      color: $odnoklassniki-text-color

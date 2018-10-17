@@ -1,0 +1,88 @@
+//variables base
+
+$linkedin-text-color: $social-text-color
+$linkedin-text-color-dark: darken( $linkedin-text-color, 10% )
+$linkedin-text-color-light: lighten( $linkedin-text-color, 10% )
+
+$linkedin-background-color: #005983
+$linkedin-background-color-dark: darken( $linkedin-background-color, 10% )
+$linkedin-background-color-light: lighten( $linkedin-background-color, 10% )
+
+$linkedin-border-color: rgba( $linkedin-background-color-dark ,0.2)
+
+$linkedin-shadow-color: $linkedin-background-color-dark
+$linkedin-focus-box-shadow-color: rgba($linkedin-background-color-dark, 0.25)
+
+$linkedin-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-linkedin
+  color: $linkedin-text-color
+  background-color: $linkedin-background-color-light
+  border-color: $linkedin-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $linkedin-background-color
+    border-color: $linkedin-border-color
+    color: $linkedin-text-color
+  &:focus,
+  &.is-focused
+    border-color: $linkedin-border-color
+    color: $linkedin-text-color
+    &:not(:active)
+      box-shadow: $linkedin-focus-box-shadow-size $linkedin-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $linkedin-background-color-dark
+    color: $linkedin-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $linkedin-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($linkedin-text-color, 5%)
+      color: $linkedin-background-color
+    &:active,
+    &.is-active
+      background-color: darken($linkedin-text-color, 5%)
+      color: $linkedin-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $linkedin-background-color
+    color: $linkedin-background-color
+    &:hover,
+    &:focus
+      background-color: $linkedin-background-color
+      border-color: $linkedin-border-color
+      color: $linkedin-text-color
+  &.is-inverted
+    background-color: $linkedin-text-color
+    color: $linkedin-background-color
+    &:hover
+      background-color: lighten( $linkedin-background-color-light, 20% )
+    &[disabled]
+      background-color: $linkedin-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $linkedin-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $linkedin-text-color
+    color: $linkedin-text-color
+    &:hover,
+    &:focus
+      background-color: $linkedin-text-color
+      color: $linkedin-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $linkedin-text-color
+      box-shadow: none
+      color: $linkedin-text-color

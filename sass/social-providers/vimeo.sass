@@ -1,0 +1,88 @@
+//variables base
+
+$vimeo-text-color: $social-text-color
+$vimeo-text-color-dark: darken( $vimeo-text-color, 10% )
+$vimeo-text-color-light: lighten( $vimeo-text-color, 10% )
+
+$vimeo-background-color: #1ab7ea
+$vimeo-background-color-dark: darken( $vimeo-background-color, 10% )
+$vimeo-background-color-light: lighten( $vimeo-background-color, 10% )
+
+$vimeo-border-color: rgba( $vimeo-background-color-dark ,0.2)
+
+$vimeo-shadow-color: $vimeo-background-color-dark
+$vimeo-focus-box-shadow-color: rgba($vimeo-background-color-dark, 0.25)
+
+$vimeo-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-vimeo
+  color: $vimeo-text-color
+  background-color: $vimeo-background-color-light
+  border-color: $vimeo-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $vimeo-background-color
+    border-color: $vimeo-border-color
+    color: $vimeo-text-color
+  &:focus,
+  &.is-focused
+    border-color: $vimeo-border-color
+    color: $vimeo-text-color
+    &:not(:active)
+      box-shadow: $vimeo-focus-box-shadow-size $vimeo-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $vimeo-background-color-dark
+    color: $vimeo-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $vimeo-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($vimeo-text-color, 5%)
+      color: $vimeo-background-color
+    &:active,
+    &.is-active
+      background-color: darken($vimeo-text-color, 5%)
+      color: $vimeo-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $vimeo-background-color
+    color: $vimeo-background-color
+    &:hover,
+    &:focus
+      background-color: $vimeo-background-color
+      border-color: $vimeo-border-color
+      color: $vimeo-text-color
+  &.is-inverted
+    background-color: $vimeo-text-color
+    color: $vimeo-background-color
+    &:hover
+      background-color: lighten( $vimeo-background-color-light, 20% )
+    &[disabled]
+      background-color: $vimeo-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $vimeo-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $vimeo-text-color
+    color: $vimeo-text-color
+    &:hover,
+    &:focus
+      background-color: $vimeo-text-color
+      color: $vimeo-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $vimeo-text-color
+      box-shadow: none
+      color: $vimeo-text-color

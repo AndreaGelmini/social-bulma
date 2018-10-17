@@ -1,0 +1,88 @@
+//variables base
+
+$pinterest-text-color: $social-text-color
+$pinterest-text-color-dark: darken( $pinterest-text-color, 10% )
+$pinterest-text-color-light: lighten( $pinterest-text-color, 10% )
+
+$pinterest-background-color: #bd081c
+$pinterest-background-color-dark: darken( $pinterest-background-color, 10% )
+$pinterest-background-color-light: lighten( $pinterest-background-color, 10% )
+
+$pinterest-border-color: rgba( $pinterest-background-color-dark ,0.2)
+
+$pinterest-shadow-color: $pinterest-background-color-dark
+$pinterest-focus-box-shadow-color: rgba($pinterest-background-color-dark, 0.25)
+
+$pinterest-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-pinterest
+  color: $pinterest-text-color
+  background-color: $pinterest-background-color-light
+  border-color: $pinterest-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $pinterest-background-color
+    border-color: $pinterest-border-color
+    color: $pinterest-text-color
+  &:focus,
+  &.is-focused
+    border-color: $pinterest-border-color
+    color: $pinterest-text-color
+    &:not(:active)
+      box-shadow: $pinterest-focus-box-shadow-size $pinterest-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $pinterest-background-color-dark
+    color: $pinterest-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $pinterest-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($pinterest-text-color, 5%)
+      color: $pinterest-background-color
+    &:active,
+    &.is-active
+      background-color: darken($pinterest-text-color, 5%)
+      color: $pinterest-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $pinterest-background-color
+    color: $pinterest-background-color
+    &:hover,
+    &:focus
+      background-color: $pinterest-background-color
+      border-color: $pinterest-border-color
+      color: $pinterest-text-color
+  &.is-inverted
+    background-color: $pinterest-text-color
+    color: $pinterest-background-color
+    &:hover
+      background-color: lighten( $pinterest-background-color-light, 20% )
+    &[disabled]
+      background-color: $pinterest-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $pinterest-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $pinterest-text-color
+    color: $pinterest-text-color
+    &:hover,
+    &:focus
+      background-color: $pinterest-text-color
+      color: $pinterest-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $pinterest-text-color
+      box-shadow: none
+      color: $pinterest-text-color

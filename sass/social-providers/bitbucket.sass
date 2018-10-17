@@ -1,0 +1,88 @@
+//variables base
+
+$bitbucket-text-color: $social-text-color
+$bitbucket-text-color-dark: darken( $bitbucket-text-color, 10% )
+$bitbucket-text-color-light: lighten( $bitbucket-text-color, 10% )
+
+$bitbucket-background-color: #163758
+$bitbucket-background-color-dark: darken( $bitbucket-background-color, 10% )
+$bitbucket-background-color-light: lighten( $bitbucket-background-color, 10% )
+
+$bitbucket-border-color: rgba( $bitbucket-background-color-dark ,0.2)
+
+$bitbucket-shadow-color: $bitbucket-background-color-dark
+$bitbucket-focus-box-shadow-color: rgba($bitbucket-background-color-dark, 0.25)
+
+$bitbucket-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-bitbucket
+  color: $bitbucket-text-color
+  background-color: $bitbucket-background-color-light
+  border-color: $bitbucket-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $bitbucket-background-color
+    border-color: $bitbucket-border-color
+    color: $bitbucket-text-color
+  &:focus,
+  &.is-focused
+    border-color: $bitbucket-border-color
+    color: $bitbucket-text-color
+    &:not(:active)
+      box-shadow: $bitbucket-focus-box-shadow-size $bitbucket-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $bitbucket-background-color-dark
+    color: $bitbucket-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $bitbucket-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($bitbucket-text-color, 5%)
+      color: $bitbucket-background-color-dark
+    &:active,
+    &.is-active
+      background-color: darken($bitbucket-text-color, 5%)
+      color: $bitbucket-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $bitbucket-background-color
+    color: $bitbucket-background-color
+    &:hover,
+    &:focus
+      background-color: $bitbucket-background-color
+      border-color: $bitbucket-border-color
+      color: $bitbucket-text-color
+  &.is-inverted
+    background-color: $bitbucket-text-color
+    color: $bitbucket-background-color
+    &:hover
+      background-color: lighten( $bitbucket-background-color-light, 20% )
+    &[disabled]
+      background-color: $bitbucket-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $bitbucket-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $bitbucket-text-color
+    color: $bitbucket-text-color
+    &:hover,
+    &:focus
+      background-color: $bitbucket-text-color
+      color: $bitbucket-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $bitbucket-text-color
+      box-shadow: none
+      color: $bitbucket-text-color

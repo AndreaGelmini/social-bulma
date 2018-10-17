@@ -1,0 +1,88 @@
+//variables base
+
+$openid-text-color: $social-text-color
+$openid-text-color-dark: darken( $openid-text-color, 10% )
+$openid-text-color-light: lighten( $openid-text-color, 10% )
+
+$openid-background-color: #f78c40
+$openid-background-color-dark: darken( $openid-background-color, 10% )
+$openid-background-color-light: lighten( $openid-background-color, 10% )
+
+$openid-border-color: rgba( $openid-background-color-dark ,0.2)
+
+$openid-shadow-color: $openid-background-color-dark
+$openid-focus-box-shadow-color: rgba($openid-background-color-dark, 0.25)
+
+$openid-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-openid
+  color: $openid-text-color
+  background-color: $openid-background-color-light
+  border-color: $openid-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $openid-background-color
+    border-color: $openid-border-color
+    color: $openid-text-color
+  &:focus,
+  &.is-focused
+    border-color: $openid-border-color
+    color: $openid-text-color
+    &:not(:active)
+      box-shadow: $openid-focus-box-shadow-size $openid-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $openid-background-color-dark
+    color: $openid-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $openid-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($openid-text-color, 5%)
+      color: $openid-background-color
+    &:active,
+    &.is-active
+      background-color: darken($openid-text-color, 5%)
+      color: $openid-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $openid-background-color
+    color: $openid-background-color
+    &:hover,
+    &:focus
+      background-color: $openid-background-color
+      border-color: $openid-border-color
+      color: $openid-text-color
+  &.is-inverted
+    background-color: $openid-text-color
+    color: $openid-background-color
+    &:hover
+      background-color: lighten( $openid-background-color-light, 20% )
+    &[disabled]
+      background-color: $openid-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $openid-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $openid-text-color
+    color: $openid-text-color
+    &:hover,
+    &:focus
+      background-color: $openid-text-color
+      color: $openid-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $openid-text-color
+      box-shadow: none
+      color: $openid-text-color

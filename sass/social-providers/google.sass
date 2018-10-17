@@ -1,0 +1,88 @@
+//variables base
+
+$google-text-color: $social-text-color
+$google-text-color-dark: darken( $google-text-color, 10% )
+$google-text-color-light: lighten( $google-text-color, 10% )
+
+$google-background-color: #c23321
+$google-background-color-dark: darken( $google-background-color, 10% )
+$google-background-color-light: lighten( $google-background-color, 10% )
+
+$google-border-color: rgba( $google-background-color-dark ,0.2)
+
+$google-shadow-color: $google-background-color-dark
+$google-focus-box-shadow-color: rgba($google-background-color-dark, 0.25)
+
+$google-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-google
+  color: $google-text-color
+  background-color: $google-background-color-light
+  border-color: $google-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $google-background-color
+    border-color: $google-border-color
+    color: $google-text-color
+  &:focus,
+  &.is-focused
+    border-color: $google-border-color
+    color: $google-text-color
+    &:not(:active)
+      box-shadow: $google-focus-box-shadow-size $google-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $google-background-color-dark
+    color: $google-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $google-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($google-text-color, 5%)
+      color: $google-background-color
+    &:active,
+    &.is-active
+      background-color: darken($google-text-color, 5%)
+      color: $google-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $google-background-color
+    color: $google-background-color
+    &:hover,
+    &:focus
+      background-color: $google-background-color
+      border-color: $google-border-color
+      color: $google-text-color
+  &.is-inverted
+    background-color: $google-text-color
+    color: $google-background-color
+    &:hover
+      background-color: lighten( $google-background-color-light, 20% )
+    &[disabled]
+      background-color: $google-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $google-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $google-text-color
+    color: $google-text-color
+    &:hover,
+    &:focus
+      background-color: $google-text-color
+      color: $google-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $google-text-color
+      box-shadow: none
+      color: $google-text-color

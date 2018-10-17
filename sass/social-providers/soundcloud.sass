@@ -1,0 +1,88 @@
+//variables base
+
+$soundcloud-text-color: $social-text-color
+$soundcloud-text-color-dark: darken( $soundcloud-text-color, 10% )
+$soundcloud-text-color-light: lighten( $soundcloud-text-color, 10% )
+
+$soundcloud-background-color: #ff8800
+$soundcloud-background-color-dark: darken( $soundcloud-background-color, 10% )
+$soundcloud-background-color-light: lighten( $soundcloud-background-color, 10% )
+
+$soundcloud-border-color: rgba( $soundcloud-background-color-dark ,0.2)
+
+$soundcloud-shadow-color: $soundcloud-background-color-dark
+$soundcloud-focus-box-shadow-color: rgba($soundcloud-background-color-dark, 0.25)
+
+$soundcloud-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-soundcloud
+  color: $soundcloud-text-color
+  background-color: $soundcloud-background-color-light
+  border-color: $soundcloud-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $soundcloud-background-color
+    border-color: $soundcloud-border-color
+    color: $soundcloud-text-color
+  &:focus,
+  &.is-focused
+    border-color: $soundcloud-border-color
+    color: $soundcloud-text-color
+    &:not(:active)
+      box-shadow: $soundcloud-focus-box-shadow-size $soundcloud-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $soundcloud-background-color-dark
+    color: $soundcloud-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $soundcloud-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($soundcloud-text-color, 5%)
+      color: $soundcloud-background-color
+    &:active,
+    &.is-active
+      background-color: darken($soundcloud-text-color, 5%)
+      color: $soundcloud-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $soundcloud-background-color
+    color: $soundcloud-background-color
+    &:hover,
+    &:focus
+      background-color: $soundcloud-background-color
+      border-color: $soundcloud-border-color
+      color: $soundcloud-text-color
+  &.is-inverted
+    background-color: $soundcloud-text-color
+    color: $soundcloud-background-color
+    &:hover
+      background-color: lighten( $soundcloud-background-color-light, 20% )
+    &[disabled]
+      background-color: $soundcloud-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $soundcloud-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $soundcloud-text-color
+    color: $soundcloud-text-color
+    &:hover,
+    &:focus
+      background-color: $soundcloud-text-color
+      color: $soundcloud-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $soundcloud-text-color
+      box-shadow: none
+      color: $soundcloud-text-color

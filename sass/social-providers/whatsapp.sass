@@ -1,0 +1,88 @@
+//variables base
+
+$whatsapp-text-color: $social-text-color
+$whatsapp-text-color-dark: darken( $whatsapp-text-color, 10% )
+$whatsapp-text-color-light: lighten( $whatsapp-text-color, 10% )
+
+$whatsapp-background-color: #25d366
+$whatsapp-background-color-dark: darken( $whatsapp-background-color, 10% )
+$whatsapp-background-color-light: lighten( $whatsapp-background-color, 10% )
+
+$whatsapp-border-color: rgba( $whatsapp-background-color-dark ,0.2)
+
+$whatsapp-shadow-color: $whatsapp-background-color-dark
+$whatsapp-focus-box-shadow-color: rgba($whatsapp-background-color-dark, 0.25)
+
+$whatsapp-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-whatsapp
+  color: $whatsapp-text-color
+  background-color: $whatsapp-background-color-light
+  border-color: $whatsapp-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $whatsapp-background-color
+    border-color: $whatsapp-border-color
+    color: $whatsapp-text-color
+  &:focus,
+  &.is-focused
+    border-color: $whatsapp-border-color
+    color: $whatsapp-text-color
+    &:not(:active)
+      box-shadow: $whatsapp-focus-box-shadow-size $whatsapp-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $whatsapp-background-color-dark
+    color: $whatsapp-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $whatsapp-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($whatsapp-text-color, 5%)
+      color: $whatsapp-background-color
+    &:active,
+    &.is-active
+      background-color: darken($whatsapp-text-color, 5%)
+      color: $whatsapp-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $whatsapp-background-color
+    color: $whatsapp-background-color
+    &:hover,
+    &:focus
+      background-color: $whatsapp-background-color
+      border-color: $whatsapp-border-color
+      color: $whatsapp-text-color
+  &.is-inverted
+    background-color: $whatsapp-text-color
+    color: $whatsapp-background-color
+    &:hover
+      background-color: lighten( $whatsapp-background-color-light, 20% )
+    &[disabled]
+      background-color: $whatsapp-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $whatsapp-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $whatsapp-text-color
+    color: $whatsapp-text-color
+    &:hover,
+    &:focus
+      background-color: $whatsapp-text-color
+      color: $whatsapp-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $whatsapp-text-color
+      box-shadow: none
+      color: $whatsapp-text-color

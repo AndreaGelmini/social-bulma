@@ -1,0 +1,88 @@
+//variables base
+
+$flickr-text-color: $social-text-color
+$flickr-text-color-dark: darken( $flickr-text-color, 10% )
+$flickr-text-color-light: lighten( $flickr-text-color, 10% )
+
+$flickr-background-color: #cc006a
+$flickr-background-color-dark: darken( $flickr-background-color, 10% )
+$flickr-background-color-light: lighten( $flickr-background-color, 10% )
+
+$flickr-border-color: rgba( $flickr-background-color-dark ,0.2)
+
+$flickr-shadow-color: $flickr-background-color-dark
+$flickr-focus-box-shadow-color: rgba($flickr-background-color-dark, 0.25)
+
+$flickr-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-flickr
+  color: $flickr-text-color
+  background-color: $flickr-background-color-light
+  border-color: $flickr-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $flickr-background-color
+    border-color: $flickr-border-color
+    color: $flickr-text-color
+  &:focus,
+  &.is-focused
+    border-color: $flickr-border-color
+    color: $flickr-text-color
+    &:not(:active)
+      box-shadow: $flickr-focus-box-shadow-size $flickr-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $flickr-background-color-dark
+    color: $flickr-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $flickr-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($flickr-text-color, 5%)
+      color: $flickr-background-color-dark
+    &:active,
+    &.is-active
+      background-color: darken($flickr-text-color, 5%)
+      color: $flickr-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $flickr-background-color
+    color: $flickr-background-color
+    &:hover,
+    &:focus
+      background-color: $flickr-background-color
+      border-color: $flickr-border-color
+      color: $flickr-text-color
+  &.is-inverted
+    background-color: $flickr-text-color
+    color: $flickr-background-color
+    &:hover
+      background-color: lighten( $flickr-background-color-light, 20% )
+    &[disabled]
+      background-color: $flickr-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $flickr-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $flickr-text-color
+    color: $flickr-text-color
+    &:hover,
+    &:focus
+      background-color: $flickr-text-color
+      color: $flickr-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $flickr-text-color
+      box-shadow: none
+      color: $flickr-text-color

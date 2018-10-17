@@ -1,0 +1,88 @@
+//variables base
+
+$dropbox-text-color: $social-text-color
+$dropbox-text-color-dark: darken( $dropbox-text-color, 10% )
+$dropbox-text-color-light: lighten( $dropbox-text-color, 10% )
+
+$dropbox-background-color: #0d6aad
+$dropbox-background-color-dark: darken( $dropbox-background-color, 10% )
+$dropbox-background-color-light: lighten( $dropbox-background-color, 10% )
+
+$dropbox-border-color: rgba( $dropbox-background-color-dark ,0.2)
+
+$dropbox-shadow-color: $dropbox-background-color-dark
+$dropbox-focus-box-shadow-color: rgba($dropbox-background-color-dark, 0.25)
+
+$dropbox-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-dropbox
+  color: $dropbox-text-color
+  background-color: $dropbox-background-color-light
+  border-color: $dropbox-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $dropbox-background-color
+    border-color: $dropbox-border-color
+    color: $dropbox-text-color
+  &:focus,
+  &.is-focused
+    border-color: $dropbox-border-color
+    color: $dropbox-text-color
+    &:not(:active)
+      box-shadow: $dropbox-focus-box-shadow-size $dropbox-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $dropbox-background-color-dark
+    color: $dropbox-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $dropbox-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($dropbox-text-color, 5%)
+      color: $dropbox-background-color-dark
+    &:active,
+    &.is-active
+      background-color: darken($dropbox-text-color, 5%)
+      color: $dropbox-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $dropbox-background-color
+    color: $dropbox-background-color
+    &:hover,
+    &:focus
+      background-color: $dropbox-background-color
+      border-color: $dropbox-border-color
+      color: $dropbox-text-color
+  &.is-inverted
+    background-color: $dropbox-text-color
+    color: $dropbox-background-color
+    &:hover
+      background-color: lighten( $dropbox-background-color-light, 20% )
+    &[disabled]
+      background-color: $dropbox-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $dropbox-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $dropbox-text-color
+    color: $dropbox-text-color
+    &:hover,
+    &:focus
+      background-color: $dropbox-text-color
+      color: $dropbox-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $dropbox-text-color
+      box-shadow: none
+      color: $dropbox-text-color

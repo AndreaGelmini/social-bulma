@@ -1,0 +1,88 @@
+//variables base
+
+$reddit-text-color: $social-text-color
+$reddit-text-color-dark: darken( $reddit-text-color, 10% )
+$reddit-text-color-light: lighten( $reddit-text-color, 10% )
+
+$reddit-background-color: #5f99cf
+$reddit-background-color-dark: darken( $reddit-background-color, 10% )
+$reddit-background-color-light: lighten( $reddit-background-color, 10% )
+
+$reddit-border-color: rgba( $reddit-background-color-dark ,0.2)
+
+$reddit-shadow-color: $reddit-background-color-dark
+$reddit-focus-box-shadow-color: rgba($reddit-background-color-dark, 0.25)
+
+$reddit-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-reddit
+  color: $reddit-text-color
+  background-color: $reddit-background-color-light
+  border-color: $reddit-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $reddit-background-color
+    border-color: $reddit-border-color
+    color: $reddit-text-color
+  &:focus,
+  &.is-focused
+    border-color: $reddit-border-color
+    color: $reddit-text-color
+    &:not(:active)
+      box-shadow: $reddit-focus-box-shadow-size $reddit-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $reddit-background-color-dark
+    color: $reddit-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $reddit-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($reddit-text-color, 5%)
+      color: $reddit-background-color
+    &:active,
+    &.is-active
+      background-color: darken($reddit-text-color, 5%)
+      color: $reddit-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $reddit-background-color
+    color: $reddit-background-color
+    &:hover,
+    &:focus
+      background-color: $reddit-background-color
+      border-color: $reddit-border-color
+      color: $reddit-text-color
+  &.is-inverted
+    background-color: $reddit-text-color
+    color: $reddit-background-color
+    &:hover
+      background-color: lighten( $reddit-background-color-light, 20% )
+    &[disabled]
+      background-color: $reddit-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $reddit-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $reddit-text-color
+    color: $reddit-text-color
+    &:hover,
+    &:focus
+      background-color: $reddit-text-color
+      color: $reddit-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $reddit-text-color
+      box-shadow: none
+      color: $reddit-text-color

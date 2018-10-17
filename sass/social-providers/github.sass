@@ -1,0 +1,88 @@
+//variables base
+
+$github-text-color: $social-text-color
+$github-text-color-dark: darken( $github-text-color, 10% )
+$github-text-color-light: lighten( $github-text-color, 10% )
+
+$github-background-color: #2b2b2b
+$github-background-color-dark: darken( $github-background-color, 10% )
+$github-background-color-light: lighten( $github-background-color, 10% )
+
+$github-border-color: rgba( $github-background-color-dark ,0.2)
+
+$github-shadow-color: $github-background-color-dark
+$github-focus-box-shadow-color: rgba($github-background-color-dark, 0.25)
+
+$github-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-github
+  color: $github-text-color
+  background-color: $github-background-color-light
+  border-color: $github-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $github-background-color
+    border-color: $github-border-color
+    color: $github-text-color
+  &:focus,
+  &.is-focused
+    border-color: $github-border-color
+    color: $github-text-color
+    &:not(:active)
+      box-shadow: $github-focus-box-shadow-size $github-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $github-background-color-dark
+    color: $github-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $github-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($github-text-color, 5%)
+      color: $github-background-color-dark
+    &:active,
+    &.is-active
+      background-color: darken($github-text-color, 5%)
+      color: $github-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $github-background-color
+    color: $github-background-color
+    &:hover,
+    &:focus
+      background-color: $github-background-color
+      border-color: $github-border-color
+      color: $github-text-color
+  &.is-inverted
+    background-color: $github-text-color
+    color: $github-background-color
+    &:hover
+      background-color: lighten( $github-background-color-light, 20% )
+    &[disabled]
+      background-color: $github-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $github-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $github-text-color
+    color: $github-text-color
+    &:hover,
+    &:focus
+      background-color: $github-text-color
+      color: $github-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $github-text-color
+      box-shadow: none
+      color: $github-text-color

@@ -1,0 +1,88 @@
+//variables base
+
+$foursquare-text-color: $social-text-color
+$foursquare-text-color-dark: darken( $foursquare-text-color, 10% )
+$foursquare-text-color-light: lighten( $foursquare-text-color, 10% )
+
+$foursquare-background-color: #f71752
+$foursquare-background-color-dark: darken( $foursquare-background-color, 10% )
+$foursquare-background-color-light: lighten( $foursquare-background-color, 10% )
+
+$foursquare-border-color: rgba( $foursquare-background-color-dark ,0.2)
+
+$foursquare-shadow-color: $foursquare-background-color-dark
+$foursquare-focus-box-shadow-color: rgba($foursquare-background-color-dark, 0.25)
+
+$foursquare-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-foursquare
+  color: $foursquare-text-color
+  background-color: $foursquare-background-color-light
+  border-color: $foursquare-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $foursquare-background-color
+    border-color: $foursquare-border-color
+    color: $foursquare-text-color
+  &:focus,
+  &.is-focused
+    border-color: $foursquare-border-color
+    color: $foursquare-text-color
+    &:not(:active)
+      box-shadow: $foursquare-focus-box-shadow-size $foursquare-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $foursquare-background-color-dark
+    color: $foursquare-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $foursquare-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($foursquare-text-color, 5%)
+      color: $foursquare-background-color
+    &:active,
+    &.is-active
+      background-color: darken($foursquare-text-color, 5%)
+      color: $foursquare-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $foursquare-background-color
+    color: $foursquare-background-color
+    &:hover,
+    &:focus
+      background-color: $foursquare-background-color
+      border-color: $foursquare-border-color
+      color: $foursquare-text-color
+  &.is-inverted
+    background-color: $foursquare-text-color
+    color: $foursquare-background-color
+    &:hover
+      background-color: lighten( $foursquare-background-color-light, 20% )
+    &[disabled]
+      background-color: $foursquare-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $foursquare-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $foursquare-text-color
+    color: $foursquare-text-color
+    &:hover,
+    &:focus
+      background-color: $foursquare-text-color
+      color: $foursquare-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $foursquare-text-color
+      box-shadow: none
+      color: $foursquare-text-color

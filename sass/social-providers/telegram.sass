@@ -1,0 +1,88 @@
+//variables base
+
+$telegram-text-color: $social-text-color
+$telegram-text-color-dark: darken( $telegram-text-color, 10% )
+$telegram-text-color-light: lighten( $telegram-text-color, 10% )
+
+$telegram-background-color: #0088cc
+$telegram-background-color-dark: darken( $telegram-background-color, 10% )
+$telegram-background-color-light: lighten( $telegram-background-color, 10% )
+
+$telegram-border-color: rgba( $telegram-background-color-dark ,0.2)
+
+$telegram-shadow-color: $telegram-background-color-dark
+$telegram-focus-box-shadow-color: rgba($telegram-background-color-dark, 0.25)
+
+$telegram-focus-box-shadow-size: 0 0 0 0.125em !default
+
+.is-telegram
+  color: $telegram-text-color
+  background-color: $telegram-background-color-light
+  border-color: $telegram-border-color
+  &:hover,
+  &.is-hovered
+    background-color: $telegram-background-color
+    border-color: $telegram-border-color
+    color: $telegram-text-color
+  &:focus,
+  &.is-focused
+    border-color: $telegram-border-color
+    color: $telegram-text-color
+    &:not(:active)
+      box-shadow: $telegram-focus-box-shadow-size $telegram-focus-box-shadow-color
+  &:active,
+  &.is-active
+    border-color: $telegram-background-color-dark
+    color: $telegram-text-color-light
+  // Colors
+  &.is-text
+    background-color: transparent
+    border-color: transparent
+    color: $telegram-background-color-light
+    text-decoration: underline
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused
+      background-color: darken($telegram-text-color, 5%)
+      color: $telegram-background-color
+    &:active,
+    &.is-active
+      background-color: darken($telegram-text-color, 5%)
+      color: $telegram-background-color-dark
+    &[disabled]
+      background-color: transparent
+      border-color: transparent
+      box-shadow: none
+  &.is-outlined
+    background-color: transparent
+    border-color: $telegram-background-color
+    color: $telegram-background-color
+    &:hover,
+    &:focus
+      background-color: $telegram-background-color
+      border-color: $telegram-border-color
+      color: $telegram-text-color
+  &.is-inverted
+    background-color: $telegram-text-color
+    color: $telegram-background-color
+    &:hover
+      background-color: lighten( $telegram-background-color-light, 20% )
+    &[disabled]
+      background-color: $telegram-text-color-light
+      border-color: transparent
+      box-shadow: none
+      color: $telegram-background-color-light
+  &.is-inverted.is-outlined
+    background-color: transparent
+    border-color: $telegram-text-color
+    color: $telegram-text-color
+    &:hover,
+    &:focus
+      background-color: $telegram-text-color
+      color: $telegram-background-color
+    &[disabled]
+      background-color: transparent
+      border-color: $telegram-text-color
+      box-shadow: none
+      color: $telegram-text-color
