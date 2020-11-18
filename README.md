@@ -1,5 +1,7 @@
  Atom Bulma    
 
+![social-bulma](https://socialify.git.ci/AndreaGelmini/social-bulma/image?description=1&font=Rokkitt&forks=1&issues=1&language=1&owner=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Light)
+
 Welcome to Social Bulma.
 ========================
 
